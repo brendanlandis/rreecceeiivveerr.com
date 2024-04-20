@@ -1,0 +1,22 @@
+nav#nav-desktop {
+    display: none;
+    @media (min-width: $lg) {
+        display: block;
+    }
+    overflow: hidden;
+    ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+
+        li {
+            display: flex;
+            align-items: center;
+            a {
+                overflow: hidden;
+                padding: 1.5em;
+            }
+        }
+    }
+}

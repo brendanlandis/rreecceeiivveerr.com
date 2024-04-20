@@ -1,0 +1,58 @@
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1536px;
+
+pre {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+// main
+body {
+    min-height: 100vh;
+    header {
+        @apply mx-auto;
+        max-width: $xl;
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 0 auto;
+        justify-content: center;
+        @media (min-width: $lg) {
+            justify-content: space-between;
+        }
+        align-items: center;
+        .logo {
+            max-width: 400px;
+            @media (max-width: $lg) {
+                img {
+                    margin-top: 2em;
+                }
+            }
+            @media (min-width: $lg) {
+                img {
+                    transform: scale(0.8);
+                }
+            }
+        }
+    }
+    > div {
+        height: auto !important;
+        margin: 1em auto;
+    }
+    main {
+        @apply mx-auto;
+        max-width: $xl;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-content: start;
+        text-align: left;
+        justify-content: center;
+        margin: 1em auto;
+        position: relative;
+        h1 {
+            text-align: center;
+        }
+    }
+}

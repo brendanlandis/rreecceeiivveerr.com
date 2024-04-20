@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik+Maze&display=swap');
+
+$font-roboto: 'Roboto Mono', monospace;
+$font-maze: 'Rubik Maze', sans-serif;
+
+$font-header: $font-maze;
+$font-nav: $font-roboto;
+$font-body: $font-roboto;
+
+header {
+    font-family: $font-header;
+}
+
+#mobile-menu,
+#nav-desktop {
+    font-family: $font-nav;
+    font-weight: 900;
+}
+
+main {
+    font-family: $font-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-header;
+}
+
+h1 {
+    div {
+        line-height: 1em;
+        margin-bottom: 0.3em;
+    }
+}
+
+h2 {
+    font-size: 3em;
+    line-height: 1em;
+    letter-spacing: 0.2em;
+    margin-bottom: 0.5em;
+    margin-top: 2em;
+    @media (min-width: $lg) {
+        margin-top: 0;
+    }
+    #shows .upcoming &,
+    #else .text & {
+        margin-top: 0;
+    }
+}
