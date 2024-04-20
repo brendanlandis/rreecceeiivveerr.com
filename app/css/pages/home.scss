@@ -38,8 +38,8 @@
         }
         @media (min-width: $lg) {
             padding: 0;
-            grid-template-columns: 1fr 1fr 1fr;
-            justify-items: space-around;
+            grid-template-columns: 1fr;
+            justify-items: center;
         }
     }
 }

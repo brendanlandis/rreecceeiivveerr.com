@@ -8,7 +8,7 @@ export default function RandomLivePic() {
         'https://api.slownames.net/api/shows?populate=deep,3&filters[myBand][band][id]=42&pagination[pageSize]=999'
     );
 
-    if (loading) return <p>loading photos...</p>;
+    if (loading) return <p>loading...</p>;
     if (error) return <p>error {JSON.stringify(error, null, 2)}</p>;
 
     const formatShows = (shows: { data: RawShowData[] }): Show[] => {
@@ -35,7 +35,7 @@ export default function RandomLivePic() {
         const selectedShowIds = new Set<number>();
         const selectedShows: Show[] = [];
 
-        while (selectedDocumentIds.size < 3) {
+        while (selectedDocumentIds.size < 1) {
             const randomShow = formattedShows[Math.floor(Math.random() * formattedShows.length)];
 
             // Avoid selecting the same show again
@@ -62,14 +62,14 @@ export default function RandomLivePic() {
                 <div key={index} className="image">
                     {/* <pre>{JSON.stringify(randomDocument, null, 2)}</pre> */}
                     <img src={randomDocument.documentation[0].urlLarge} alt={randomDocument.documentation[0].alt} />
-                    <p>
+                    {/* <p>
                         {randomDocument.bands[0].displayBandname ? (
                             <>{randomDocument.bands[0].displayBandname} in </>
                         ) : (
                             randomDocument.bands[0].bandname && <>{randomDocument.bands[0].bandname} in </>
                         )}
                         {randomDocument.city} ({randomDocument.shortYear})
-                    </p>
+                    </p> */}
                     {randomDocument.documentation[0].credit && (
                         <p className="credit">photo by {randomDocument.documentation[0].credit}</p>
                     )}
