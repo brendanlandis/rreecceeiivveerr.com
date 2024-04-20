@@ -35,7 +35,7 @@ export default function RandomLivePic() {
         const selectedShowIds = new Set<number>();
         const selectedShows: Show[] = [];
 
-        while (selectedDocumentIds.size < 1) {
+        while (selectedDocumentIds.size < 3) {
             const randomShow = formattedShows[Math.floor(Math.random() * formattedShows.length)];
 
             // Avoid selecting the same show again

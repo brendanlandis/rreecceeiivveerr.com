@@ -1,3 +1,45 @@
 #home {
-    /* border: 1px solid #0f0; */
+    text-align: center;
+    img {
+        margin: 0 auto;
+    }
+    .intro-text {
+        margin: 0 auto;
+        max-width: 525px;
+        text-align: justify;
+        padding: 0 1em;
+        @media (min-width: $lg) {
+            padding: 0;
+        }
+        p {
+            margin: 0 auto 2em auto;
+        }
+    }
+    a {
+        font-weight: bold;
+        display: inline;
+        text-decoration: underline;
+    }
+    .images {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: 1fr;
+        padding: 0 1em;
+        align-items: start;
+        margin-bottom: 3em;
+        p {
+            max-width: 640px;
+            margin: 0 auto;
+            font-size: 0.85em;
+            text-align: right;
+        }
+        img {
+            width: 100%;
+        }
+        @media (min-width: $lg) {
+            padding: 0;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-items: space-around;
+        }
+    }
 }
