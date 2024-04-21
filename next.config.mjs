@@ -18,6 +18,16 @@ const nextConfig = {
     sassOptions: {
         includePaths: [path.join(__dirname, 'css')],
     },
+    redirects: async () => {
+        return [
+            {
+                source: '/:path*',
+                has: [{ type: 'header', key: 'host', value: 'www.rreecceeiivveerr.com' }],
+                destination: 'https://rreecceeiivveerr.com/:path*',
+                permanent: true,
+            },
+        ];
+    },
 };
 
 export default nextConfig;
